@@ -1,4 +1,4 @@
-pageextension 50049 "DXCSalesOrderShipmentPageExt" extends "Sales Order Shipment" //MyTargetPageId
+pageextension 50019 "DXCSalesOrderShipmentPageExt" extends "Sales Order Shipment" //MyTargetPageId
 {
     layout
     {        

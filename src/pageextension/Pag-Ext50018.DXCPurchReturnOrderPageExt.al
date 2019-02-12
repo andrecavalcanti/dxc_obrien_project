@@ -1,4 +1,4 @@
-pageextension 50052 "DXCPosteReturnShipmentPageExt" extends "Posted Return Shipment" //MyTargetPageId 1
+pageextension 50018 "DXCPurchReturnOrderPageExt" extends "Purchase Return Order" //MyTargetPageId 1
 {
     layout
     {     

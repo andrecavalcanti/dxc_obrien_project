@@ -1,10 +1,10 @@
-pageextension 50046 "DXCPostedSlCrMemosPageExt" extends "Posted Sales Credit Memos" //MyTargetPageId
+pageextension 50027 "DXCPostedSlShipmentsPageExt" extends "Posted Sales Shipments" //MyTargetPageId
 {
     layout
     {        
         addlast(Control1)
-        {         
-            field("Return Order No.";"Return Order No.")
+        {        
+            field("Order No.";"Order No.")
             {
                 ApplicationArea = All;
             }

@@ -1,4 +1,4 @@
-pageextension 50055 "DXCShipToAddressPageExt" extends "Ship-to Address" //MyTargetPageId
+pageextension 50011 "DXCShipToAddressPageExt" extends "Ship-to Address" //MyTargetPageId
 {
     layout
     {        

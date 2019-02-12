@@ -1,4 +1,4 @@
-pageextension 50051 "DXCPurchReturnOrderArchPageExt" extends "Purchase Return Order Archive" //MyTargetPageId 1
+pageextension 50017 "DXCPurchReturnOrderArchPageExt" extends "Purchase Return Order Archive" //MyTargetPageId 1
 {
     layout
     {     

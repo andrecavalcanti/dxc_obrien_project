@@ -1,10 +1,10 @@
-pageextension 50045 "DXCPostedSlInvoicesPageExt" extends "Posted Sales Invoices" //MyTargetPageId
+pageextension 50014 "DXCPostedRetReceiptsPageExt" extends "Posted Return Receipts" //MyTargetPageId
 {
     layout
     {        
         addlast(Control1)
         {         
-            field("Order No.";"Order No.")
+            field("Return Order No.";"Return Order No.")
             {
                 ApplicationArea = All;
             }

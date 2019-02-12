@@ -1,4 +1,4 @@
-pageextension 50041 "DXCCustomerListExt" extends "Customer List" //MyTargetPageId
+pageextension 50030 "DXCCustomerListExt" extends "Customer List" //MyTargetPageId
 {
     layout
     {

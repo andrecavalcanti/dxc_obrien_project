@@ -1,14 +1,16 @@
 
-pageextension 50048 "DXCSlRtOrderArcSubformPageExt" extends "Sales Return Order Arc Subform" //MyTargetPageId
+pageextension 50021 "DXCSalesRtOrderSubformPageExt" extends "Sales Return Order Subform" //MyTargetPageId
 {
     layout
     {        
         addlast(Control1)
         {
-            field("DXC Order Line No.";"DXC Order Line No.")
+         
+           field("DXC Order Line No.";"DXC Order Line No.")
             {
                 ApplicationArea = All;
             }
+
         }
   
         

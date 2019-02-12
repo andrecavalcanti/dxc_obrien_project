@@ -1,4 +1,4 @@
-pageextension 50042 "DXCSalesRetOrderArchPageExt" extends "Sales Return Order Archive" //MyTargetPageId
+pageextension 50029 "DXCSalesRetOrderArchPageExt" extends "Sales Return Order Archive" //MyTargetPageId
 {
      layout
     {     
