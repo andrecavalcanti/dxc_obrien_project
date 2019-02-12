@@ -1,5 +1,5 @@
 
-pageextension 50041 "DXCFirmPlannedProdOrderPageExt" extends "Firm Planned Prod. Order" //MyTargetPageId
+pageextension 50033 "DXCFirmPlannedProdOrderPageExt" extends "Firm Planned Prod. Order" //MyTargetPageId
 {
     layout
     {        

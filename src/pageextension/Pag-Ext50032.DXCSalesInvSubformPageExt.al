@@ -1,5 +1,5 @@
 
-pageextension 50034 "DXCSalesInvSubformPageExt" extends "Sales Invoice Subform" //MyTargetPageId
+pageextension 50032 "DXCSalesInvSubformPageExt" extends "Sales Invoice Subform" //MyTargetPageId
 {
     layout
     {  

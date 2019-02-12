@@ -1,5 +1,5 @@
 
-pageextension 50042 "DXCPlanningWorksheetPageExt" extends "Planning Worksheet" //MyTargetPageId
+pageextension 50034 "DXCPlanningWorksheetPageExt" extends "Planning Worksheet" //MyTargetPageId
 {
     layout
     {        
