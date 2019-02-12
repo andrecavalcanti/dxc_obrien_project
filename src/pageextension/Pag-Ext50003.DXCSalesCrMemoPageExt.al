@@ -23,7 +23,7 @@ pageextension 50003 "DXCSalesCrMemoPageExt" extends "Sales Credit Memo" //MyTarg
             }
         }
 
-        addafter("Package Tracking No.")
+        addafter("Location Code")
         {
            
             field("DXC Customer Shipping Account";"DXC Customer Shipping Account")

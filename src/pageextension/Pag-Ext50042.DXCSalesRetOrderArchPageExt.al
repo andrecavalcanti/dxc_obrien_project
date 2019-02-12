@@ -38,41 +38,38 @@ pageextension 50042 "DXCSalesRetOrderArchPageExt" extends "Sales Return Order Ar
             {
                 ApplicationArea = All;
             }
-            
-        }
 
-        addafter("Late Order Shipping")   
-        {
-             group("Weights And Dims")
+            group("Weights And Dims")
+            {
+                Caption = 'Weights And Dims';
+                field(DXCGetWeightDescription;DXCGetWeightDescription)
                 {
-                    Caption = 'Weights And Dims';
-                    field(DXCGetWeightDescription;DXCGetWeightDescription)
-                    {
-                        AssistEdit = true;
-                        Caption = 'Weights and Dims';
-                        MultiLine = true;
-                        RowSpan = 3;
-                        ShowCaption = false;
+                    AssistEdit = true;
+                    Caption = 'Weights and Dims';
+                    MultiLine = true;
+                    RowSpan = 3;
+                    ShowCaption = false;
 
-                        trigger OnAssistEdit();
-                        var
-                            DXCEditWeightsandDims : Page "DXC Edit Weights and Dims";
-                        begin
-                            CurrPage.UPDATE(true);
-                            COMMIT;
-                            DXCEditWeightsandDims.SETRECORD(Rec);
-                            DXCEditWeightsandDims.RUNMODAL;
-                            DXCEditWeightsandDims.GETRECORD(Rec);
-                            CurrPage.UPDATE;
-                        end;
+                    trigger OnAssistEdit();
+                    var
+                        DXCEditWeightsandDims : Page "DXC Edit Weights and Dims";
+                    begin
+                        CurrPage.UPDATE(true);
+                        COMMIT;
+                        DXCEditWeightsandDims.SETRECORD(Rec);
+                        DXCEditWeightsandDims.RUNMODAL;
+                        DXCEditWeightsandDims.GETRECORD(Rec);
+                        CurrPage.UPDATE;
+                    end;
 
-                        trigger OnValidate();
-                        begin
-                            //DXCSetWeightDescription(DXC_WeightsDescription);
-                        end;
-                    }
+                    trigger OnValidate();
+                    begin
+                        //DXCSetWeightDescription(DXC_WeightsDescription);
+                    end;
                 }
-        }   
+            }
+            
+        }        
                 
     }      
     

@@ -40,5 +40,33 @@ tableextension 50005 "DXCSalesInvHeaderExt" extends "Sales Invoice Header" //MyT
         }
         
     }
+
+    [Scope('Personalization')]
+    procedure DXCSetWeightDescription(NewWeightDescription : Text);
+    var
+        TempBlob : Record TempBlob temporary;
+    begin
+        CLEAR("DXC Weights and Dims");
+        if NewWeightDescription = '' then
+          exit;
+        TempBlob.Blob := "DXC Weights and Dims";
+        TempBlob.WriteAsText(NewWeightDescription,TEXTENCODING::Windows);
+        "DXC Weights and Dims" := TempBlob.Blob;
+        MODIFY;
+    end;
+
+    [Scope('Personalization')]
+    procedure DXCGetWeightDescription() : Text;
+    var
+        TempBlob : Record TempBlob temporary;
+        CR : Text[1];
+    begin
+        CALCFIELDS("DXC Weights and Dims");
+        if not "DXC Weights and Dims".HASVALUE then
+          exit('');
+        CR[1] := 10;
+        TempBlob.Blob := "DXC Weights and Dims";
+        exit(TempBlob.ReadAsText(CR,TEXTENCODING::Windows));
+    end;
     
 }

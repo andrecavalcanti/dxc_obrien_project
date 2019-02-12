@@ -21,10 +21,10 @@ pageextension 50010 "DXCPagItemCardExtension" extends "Item Card" //MyTargetPage
             field("Rolled-up Cap. Overhead Cost";"Rolled-up Cap. Overhead Cost")
             {
             }
-        }   
+        }
+
+    }   
 
         
-    actions
-    {
-    }
+    
 }

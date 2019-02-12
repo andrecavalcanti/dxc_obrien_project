@@ -23,7 +23,7 @@ pageextension 50005 "DXCPostedSalesInvPageExt" extends "Posted Sales Invoice" //
             }
         }
 
-        addafter("Shipping Time")
+        addafter("Shipping Agent Code")
         {
            
             field("DXC Customer Shipping Account";"DXC Customer Shipping Account")

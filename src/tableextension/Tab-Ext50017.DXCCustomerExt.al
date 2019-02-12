@@ -2,7 +2,7 @@ tableextension 50017 "DXCCustomerExt" extends Customer //MyTargetTableId
 {
     fields
     {
-         field(50000;"DXC Address 3";Text[50])
+        field(50000;"DXC Address 3";Text[50])
         {
             Caption = 'Address 3';
             Description = 'AOB-11';

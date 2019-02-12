@@ -8,17 +8,14 @@ pageextension 50041 "DXCCustomerListExt" extends "Customer List" //MyTargetPageI
             {
                 ApplicationArea = All;
             }
-        }
 
-        addafter(City)
-        {
-            field("DXC DNB Number";"DXC DNB Number")
+             field("DXC DNB Number";"DXC DNB Number")
             {
                 ApplicationArea = All;
             }
         }
+
     }
-    
     actions
     {
     }
