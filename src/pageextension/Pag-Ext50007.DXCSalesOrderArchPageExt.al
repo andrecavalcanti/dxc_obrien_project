@@ -56,7 +56,7 @@ pageextension 50007 "DXCSalesOrderArchPageExt" extends "Sales Order Archive" //M
 
                         trigger OnAssistEdit();
                         var
-                            DXCEditWeightsandDims : Page "DXC Edit Weights and Dims";
+                            DXCEditWeightsandDims : Page "DXCEditWeightsAndDims";
                         begin
                             CurrPage.UPDATE(true);
                             COMMIT;

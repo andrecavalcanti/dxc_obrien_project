@@ -52,7 +52,7 @@ pageextension 50008 "DXCSalesRetOrderPageExt" extends "Sales Return Order" //MyT
 
                     trigger OnAssistEdit();
                     var
-                        DXCEditWeightsandDims : Page "DXC Edit Weights and Dims";
+                        DXCEditWeightsandDims : Page "DXCEditWeightsAndDims";
                     begin
                         CurrPage.UPDATE(true);
                         COMMIT;

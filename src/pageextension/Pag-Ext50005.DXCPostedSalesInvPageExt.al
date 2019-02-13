@@ -56,7 +56,7 @@ pageextension 50005 "DXCPostedSalesInvPageExt" extends "Posted Sales Invoice" //
 
                         trigger OnAssistEdit();
                         var
-                            DXCEditWeightsandDims : Page "DXC Edit Weights and Dims";
+                            DXCEditWeightsandDims : Page "DXCEditWeightsAndDims";
                         begin
                             CurrPage.UPDATE(true);
                             COMMIT;

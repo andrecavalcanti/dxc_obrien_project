@@ -1,4 +1,4 @@
-page 50000 "DXC Edit Weights and Dims"
+page 50000 "DXCEditWeightsAndDims"
 {
     // version AOB-11
 
@@ -28,9 +28,9 @@ page 50000 "DXC Edit Weights and Dims"
 
     trigger OnQueryClosePage(CloseAction : Action) : Boolean;
     begin
-        if CloseAction <> ACTION::Cancel then
-        DXCSetWeightDescription(DXC_WeightsandDims);
-    end;
+        //if CloseAction <> ACTION::Cancel then
+         //   DXCSetWeightDescription(DXC_WeightsandDims);
+    end;   
 
     var
         DXC_WeightsandDims : Text;

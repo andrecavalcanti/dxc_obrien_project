@@ -56,7 +56,7 @@ pageextension 50003 "DXCSalesCrMemoPageExt" extends "Sales Credit Memo" //MyTarg
 
                         trigger OnAssistEdit();
                         var
-                            DXCEditWeightsandDims : Page "DXC Edit Weights and Dims";
+                            DXCEditWeightsandDims : Page "DXCEditWeightsAndDims";
                         begin
                             CurrPage.UPDATE(true);
                             COMMIT;

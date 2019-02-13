@@ -1,7 +1,39 @@
 pageextension 50019 "DXCSalesOrderShipmentPageExt" extends "Sales Order Shipment" //MyTargetPageId
 {
     layout
-    {        
+    { 
+         addafter("Late Order Shipping")   
+        {
+            group("Weights And Dims")
+            {
+                Caption = 'Weights And Dims';
+                field(DXCGetWeightDescription;DXCGetWeightDescription)
+                {
+                    AssistEdit = true;
+                    Caption = 'Weights and Dims';
+                    MultiLine = true;
+                    RowSpan = 3;
+                    ShowCaption = false;
+
+                    trigger OnAssistEdit();
+                    var
+                        DXCEditWeightsandDims : Page DXCEditWeightsAndDims;
+                    begin
+                        CurrPage.UPDATE(true);
+                        COMMIT;
+                        DXCEditWeightsandDims.SETRECORD(Rec);
+                        DXCEditWeightsandDims.RUNMODAL;
+                        DXCEditWeightsandDims.GETRECORD(Rec);
+                        CurrPage.UPDATE;
+                    end;
+
+                    trigger OnValidate();
+                    begin
+                        //DXCSetWeightDescription(DXC_WeightsDescription);
+                    end;
+                }
+            }
+        }          
         
     }
     
@@ -58,4 +90,6 @@ pageextension 50019 "DXCSalesOrderShipmentPageExt" extends "Sales Order Shipment
         Text002 : TextConst ENU='There are unpaid Prepayment Invoices related to %1 %2.',ESM='Existen facturas anticipo sin abonar relacionadas con %1 %2.',FRC='Il y a des factures pour paiement anticipé non payées associées à %1 %2.',ENC='There are unpaid Prepayment Invoices related to %1 %2.';
         SalesLine : Record "Sales Line";
         FreightAmount : Decimal;
+
+   
 }

@@ -56,7 +56,7 @@ pageextension 50000 "DXCSalesOrderPageExt" extends "Sales Order" //MyTargetPageI
 
                         trigger OnAssistEdit();
                         var
-                            DXCEditWeightsandDims : Page "DXC Edit Weights and Dims";
+                            DXCEditWeightsandDims : Page "DXCEditWeightsAndDims";
                         begin
                             CurrPage.UPDATE(true);
                             COMMIT;
@@ -65,11 +65,7 @@ pageextension 50000 "DXCSalesOrderPageExt" extends "Sales Order" //MyTargetPageI
                             DXCEditWeightsandDims.GETRECORD(Rec);
                             CurrPage.UPDATE;
                         end;
-
-                        trigger OnValidate();
-                        begin
-                            //DXCSetWeightDescription(DXC_WeightsDescription);
-                        end;
+                        
                     }
                 }
         }   
