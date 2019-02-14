@@ -43,37 +43,36 @@ pageextension 50003 "DXCSalesCrMemoPageExt" extends "Sales Credit Memo" //MyTarg
 
         addafter("DXC Inco Location")   
         {
-             group("Weights And Dims")
+            group("Weights And Dims")
+            {
+                Caption = 'Weights And Dims';
+                field(WeighDimDescription;WeighDimDescription)
                 {
-                    Caption = 'Weights And Dims';
-                    field(DXCGetWeightDescription;DXCGetWeightDescription)
-                    {
-                        AssistEdit = true;
-                        Caption = 'Weights and Dims';
-                        MultiLine = true;
-                        RowSpan = 3;
-                        ShowCaption = false;
+                    Caption = 'Weights and Dims';
+                    MultiLine = true;
+                    ShowCaption = false;
 
-                        trigger OnAssistEdit();
-                        var
-                            DXCEditWeightsandDims : Page "DXCEditWeightsAndDims";
-                        begin
-                            CurrPage.UPDATE(true);
-                            COMMIT;
-                            DXCEditWeightsandDims.SETRECORD(Rec);
-                            DXCEditWeightsandDims.RUNMODAL;
-                            DXCEditWeightsandDims.GETRECORD(Rec);
-                            CurrPage.UPDATE;
-                        end;
-
-                        trigger OnValidate();
-                        begin
-                            //DXCSetWeightDescription(DXC_WeightsDescription);
-                        end;
-                    }
+                    trigger OnValidate();
+                    begin
+                        // >> AOB-11
+                        DXCSetWeightDescription(WeighDimDescription);
+                        // << AOB-11
+                    end;
                 }
+            }
         }   
 
-    }     
+    }  
+
+     var 
+         "---DXC Var---" : Integer;
+        WeighDimDescription : Text;  
+
+    trigger OnAfterGetRecord();
+        begin            
+            // >> AOB-11
+            WeighDimDescription := DXCGetWeightDescription;
+            // >> AOB-11
+        end;    
     
 }

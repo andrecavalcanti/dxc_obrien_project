@@ -46,30 +46,35 @@ pageextension 50000 "DXCSalesOrderPageExt" extends "Sales Order" //MyTargetPageI
              group("Weights And Dims")
                 {
                     Caption = 'Weights And Dims';
-                    field(DXCGetWeightDescription;DXCGetWeightDescription)
+                    field(WeighDimDescription;WeightDimDescription)
                     {
-                        AssistEdit = true;
                         Caption = 'Weights and Dims';
                         MultiLine = true;
-                        RowSpan = 3;
                         ShowCaption = false;
 
-                        trigger OnAssistEdit();
-                        var
-                            DXCEditWeightsandDims : Page "DXCEditWeightsAndDims";
+                        trigger OnValidate();
                         begin
-                            CurrPage.UPDATE(true);
-                            COMMIT;
-                            DXCEditWeightsandDims.SETRECORD(Rec);
-                            DXCEditWeightsandDims.RUNMODAL;
-                            DXCEditWeightsandDims.GETRECORD(Rec);
-                            CurrPage.UPDATE;
+                            // >> AOB-11
+                            DXCSetWeightDescription(WeightDimDescription);
+                            // << AOB-11
                         end;
                         
                     }
                 }
         }   
                 
-    }      
+    }
+    
+
+    var 
+         "---DXC Var---" : Integer;
+        WeightDimDescription : Text;      
+
+    trigger OnAfterGetRecord();
+        begin            
+            // >> AOB-11
+            WeightDimDescription := DXCGetWeightDescription;
+            // >> AOB-11
+        end;
     
 }

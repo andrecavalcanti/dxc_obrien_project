@@ -46,33 +46,27 @@ pageextension 50004 "DXCPostedSalesShipPageExt" extends "Posted Sales Shipment" 
              group("Weights And Dims")
                 {
                     Caption = 'Weights And Dims';
-                    field(DXCGetWeightDescription;DXCGetWeightDescription)
+                    field(WeighDimDescription;WeightDimDescription)
                     {
-                        AssistEdit = true;
                         Caption = 'Weights and Dims';
                         MultiLine = true;
-                        RowSpan = 3;
                         ShowCaption = false;
-
-                        trigger OnAssistEdit();
-                        var
-                            DXCEditWeightsandDims : Page "DXCEditWeightsAndDims";
-                        begin
-                            CurrPage.UPDATE(true);
-                            COMMIT;
-                            DXCEditWeightsandDims.SETRECORD(Rec);
-                            DXCEditWeightsandDims.RUNMODAL;
-                            DXCEditWeightsandDims.GETRECORD(Rec);
-                            CurrPage.UPDATE;
-                        end;
-
-                        trigger OnValidate();
-                        begin
-                            //DXCSetWeightDescription(DXC_WeightsDescription);
-                        end;
+                     
                     }
                 }
         }   
 
-    }     
+    }
+
+    var 
+         "---DXC Var---" : Integer;
+        WeightDimDescription : Text;      
+
+    trigger OnAfterGetRecord();
+        begin            
+            // >> AOB-11
+            WeightDimDescription := DXCGetWeightDescription;
+            // >> AOB-11
+        end;
+         
 }
