@@ -26,51 +26,11 @@ pageextension 50019 "DXCSalesOrderShipmentPageExt" extends "Sales Order Shipment
     }
     
     actions
-    {
-        addafter("P&ost")
+    {           
+        Modify("P&ost")
         {
-            action(DXCPost)
-            {
-                CaptionML = ENU='P&OST',
-                            ESM='&Registrar',
-                            FRC='Rep&orter',
-                            ENC='P&ost';
-                Ellipsis = true;
-                Image = Post;
-                Promoted = true;
-                PromotedCategory = Process;
-                PromotedIsBig = true;
-                ShortCutKey = 'F9';
-                ToolTipML = ENU='Finalize the document or journal by posting the amounts and quantities to the related accounts in your company books.',
-                            ESM='Permite finalizar el documento o el diario registrando los importes y las cantidades en las cuentas relacionadas de los libros de su empresa.',
-                            FRC='Finalisez le document ou le journal en reportant les montants et les quantités sur les comptes concernés dans la comptabilité de la compagnie.',
-                            ENC='Finalize the document or journal by posting the amounts and quantities to the related accounts in your company books.';
-
-                trigger OnAction();
-                var
-                    ApprovalsMgmt : Codeunit "Approvals Mgmt.";
-                    PrepaymentMgt : Codeunit "Prepayment Mgt.";
-                begin
-                    //AOB-21
-                    if ApprovalsMgmt.PrePostApprovalCheckSales(Rec) then begin
-                        if PrepaymentMgt.TestSalesPrepayment(Rec) then
-                        ERROR(STRSUBSTNO(Text001,"Document Type","No."));
-
-                        if PrepaymentMgt.TestSalesPayment(Rec) then
-                        ERROR(STRSUBSTNO(Text002,"Document Type","No."));
-
-                        SalesLine.VALIDATE("Document Type","Document Type");
-                        SalesLine.VALIDATE("Document No.","No.");
-                        SalesLine.DXCInsertFreightLine(FreightAmount);
-                        CODEUNIT.RUN(CODEUNIT::"Ship-Post (Yes/No)",Rec);
-                        if "Shipping No." = '-1' then
-                        ERROR('');
-                    end;
-                end;
-            }
-
+            Visible = false;
         }
-        
     }
 
     var
