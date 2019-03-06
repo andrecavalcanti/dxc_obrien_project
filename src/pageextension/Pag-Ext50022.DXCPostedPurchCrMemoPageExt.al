@@ -2,7 +2,7 @@ pageextension 50022 "DXCPostedPurchCrMemoPageExt" extends "Posted Purchase Credi
 {
     layout
     {     
-        addafter("Provincial Tax Area Code")
+        addafter("Ship-to UPS Zone")
         {            
             field("DXC Vendor Shipping Account";"DXC Vendor Shipping Account")
             {

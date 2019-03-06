@@ -2,7 +2,7 @@ pageextension 50017 "DXCPurchReturnOrderArchPageExt" extends "Purchase Return Or
 {
     layout
     {     
-        addafter("Order Address Code")
+        addafter("Ship-to Contact")
         {
             field("DXC Vendor Shipping Account";"DXC Vendor Shipping Account")
             {

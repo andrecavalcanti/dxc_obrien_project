@@ -2,7 +2,7 @@ pageextension 50016 "DXCPosteReturnShipmentPageExt" extends "Posted Return Shipm
 {
     layout
     {     
-        addafter("Order Address Code")
+        addafter("Location Code")
         {
             field("DXC Vendor Shipping Account";"DXC Vendor Shipping Account")
             {

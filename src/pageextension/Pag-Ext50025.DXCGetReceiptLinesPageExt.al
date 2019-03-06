@@ -8,6 +8,10 @@ pageextension 50025 "DXCGetReceiptLinesPageExt" extends "Get Receipt Lines" //My
             {
                 ApplicationArea = All;
             }
+             field("Unit Cost";"Unit Cost")
+            {
+                ApplicationArea = All;
+            }
         }
     }
     
