@@ -5,8 +5,11 @@ pageextension 50056 "DXCSalesOrderInvoiceExt" extends "Sales Order Invoice"
     {
         addafter(Invoicing)
         {
+            
              group(Shipping)
             {
+                Editable = false;
+                
                 CaptionML = ENU='Shipping',
                             ESM='Envío',
                             FRC='Livraison',
@@ -105,6 +108,19 @@ pageextension 50056 "DXCSalesOrderInvoiceExt" extends "Sales Order Invoice"
                                 FRC='Spécifie le montant du transport pour la livraison. Lorsque vous créez un document de vente, vous pouvez spécifier des frais de fret comme frais annexes sur le document de vente. Vous pouvez également les mentionner dans la fenêtre Document de vente - Livraison.',
                                 ENC='Specifies the freight amount for the shipment. When you create a sales order, you can specify freight charges as item charges on the sales order, or you can specify the freight charges in the Sales Order Shipment window.';
                 } */
+
+                field("DXC Customer Shipping Account";"DXC Customer Shipping Account")
+                {
+                    ApplicationArea = All;
+                }
+                field("DXC End User Name";"DXC End User Name")
+                {
+                    ApplicationArea = All;
+                }
+                field("DXC Inco Location";"DXC Inco Location")
+                {
+                    ApplicationArea = All;
+                }
                 field("Location Code";"Location Code")
                 {
                     //Editable = "Location CodeEditable";

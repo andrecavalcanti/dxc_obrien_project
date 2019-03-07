@@ -2,6 +2,31 @@ pageextension 50019 "DXCSalesOrderShipmentPageExt" extends "Sales Order Shipment
 {
     layout
     { 
+        addafter("Ship-to Address 2")  
+        {
+            field("DXC Ship-to Address 3";"DXC Address 3")
+            {
+                ApplicationArea = All;
+            }   
+        }
+
+        addafter("Shipping Time")
+        {           
+            field("DXC Customer Shipping Account";"DXC Customer Shipping Account")
+            {
+                ApplicationArea = All;
+            }
+            field("DXC End User Name";"DXC End User Name")
+            {
+                ApplicationArea = All;
+            }
+            field("DXC Inco Location";"DXC Inco Location")
+            {
+                ApplicationArea = All;
+            }
+            
+        } 
+            
          addafter("Late Order Shipping")   
         {
             group("Weights And Dims")
@@ -21,6 +46,8 @@ pageextension 50019 "DXCSalesOrderShipmentPageExt" extends "Sales Order Shipment
                         end;
                 }
             }
+
+            
         }          
         
     }

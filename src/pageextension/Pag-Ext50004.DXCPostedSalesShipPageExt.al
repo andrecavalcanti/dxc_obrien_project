@@ -56,6 +56,14 @@ pageextension 50004 "DXCPostedSalesShipPageExt" extends "Posted Sales Shipment" 
                 }
         }   
 
+        addafter("Ship-to Address 2")
+        {
+            field("Address 3";"DXC Address 3")
+            {
+                ApplicationArea = All;
+            }
+        } 
+
     }
 
     var 
