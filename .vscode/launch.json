@@ -5,7 +5,7 @@
             "type": "al",
             "request": "launch",            
             "name": "Your own server",
-            "server": "http://172.26.83.131",                    
+            "server": "http://172.26.95.175",                    
             //"serverInstance": "OBRIEN_NAV2018_CU8_NA",
             "serverInstance": "NAV",
             "port"  : 7049, 
