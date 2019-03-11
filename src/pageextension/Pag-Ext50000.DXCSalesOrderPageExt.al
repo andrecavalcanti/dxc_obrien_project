@@ -43,7 +43,7 @@ pageextension 50000 "DXCSalesOrderPageExt" extends "Sales Order" //MyTargetPageI
 
         addafter("Ship-to Address 2")
         {
-            field("Address 3";"DXC Address 3")
+            field("Address 3";"DXC Ship-to Address 3")
             {
                 //Editable = ShipToOptions = ShipToOptions::"Custom Address";
                 Editable = false;
