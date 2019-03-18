@@ -46,6 +46,7 @@ pageextension 50000 "DXCSalesOrderPageExt" extends "Sales Order" //MyTargetPageI
             field("Address 3";"DXC Ship-to Address 3")
             {
                 //Editable = ShipToOptions = ShipToOptions::"Custom Address";
+                Caption = 'Address 3';
                 Editable = false;
                 ApplicationArea = All;
             }
