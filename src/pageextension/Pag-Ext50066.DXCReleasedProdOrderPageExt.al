@@ -1,17 +1,8 @@
 
-pageextension 50065 "DXCReleasedProdOrderPageExt" extends "Released Production Order" //MyTargetPageId
+pageextension 50067 "DXCFinishedProdOrderPageExt" extends "Finished Production Order" //MyTargetPageId
 {
     layout
     {        
-        addafter("No. of Change Orders")
-        {  
-            field("DXC CNC";"DXC CNC")
-            {
-                ApplicationArea = All;
-            }
-
-        }  
-
         addbefore(Control1900383207)
         {  
             part("Item Qty. Detail FactBox";"DXCItemQtyDetailFactBox")
