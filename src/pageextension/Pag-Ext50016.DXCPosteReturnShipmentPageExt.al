@@ -12,6 +12,12 @@ pageextension 50016 "DXCPosteReturnShipmentPageExt" extends "Posted Return Shipm
             {
                 ApplicationArea = All;
             }
+            // >> AOB-45
+            field("DXC Shipping Agent";"DXC Shipping Agent")
+            {
+                ApplicationArea = All; 
+            }
+            // << AOB-45
         }        
                 
     }      

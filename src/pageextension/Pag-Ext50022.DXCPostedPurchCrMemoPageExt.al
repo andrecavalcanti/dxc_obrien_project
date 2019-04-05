@@ -8,6 +8,12 @@ pageextension 50022 "DXCPostedPurchCrMemoPageExt" extends "Posted Purchase Credi
             {
                 ApplicationArea = All; 
             }
+            // >> AOB-45
+            field("DXC Shipping Agent";"DXC Shipping Agent")
+            {
+                ApplicationArea = All; 
+            }
+            // << AOB-45
         }       
         
     }   

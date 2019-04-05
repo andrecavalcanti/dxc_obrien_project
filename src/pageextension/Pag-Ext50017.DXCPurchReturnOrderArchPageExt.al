@@ -12,6 +12,12 @@ pageextension 50017 "DXCPurchReturnOrderArchPageExt" extends "Purchase Return Or
             {
                 ApplicationArea = All;
             }
+            // >> AOB-45
+            field("DXC Shipping Agent";"DXC Shipping Agent")
+            {
+                ApplicationArea = All; 
+            }
+            // << AOB-45
         }        
                 
     }      
