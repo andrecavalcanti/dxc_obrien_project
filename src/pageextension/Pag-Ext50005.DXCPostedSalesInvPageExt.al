@@ -60,7 +60,6 @@ pageextension 50005 "DXCPostedSalesInvPageExt" extends "Posted Sales Invoice" //
             field("Address 3";"DXC Address 3")
             {
                 ApplicationArea = All;
-                Editable = false;
             }
         } 
 

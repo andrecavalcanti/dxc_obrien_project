@@ -38,6 +38,11 @@ tableextension 50004 "DXCSalesShipHeaderExt" extends "Sales Shipment Header" //M
             Caption = 'Project No.';
             Description = 'AOB-11';
         }
+        field(50009;"DXC Ship-to Address 3";Text[50])
+        {
+            Caption = 'Ship-to Address 3';
+            Description = 'AOB-11';
+        }
         
     }
 

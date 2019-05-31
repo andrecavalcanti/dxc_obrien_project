@@ -38,6 +38,12 @@ tableextension 50013 "DXCReturnRecHeaderExt" extends "Return Receipt Header" //M
             Caption = 'Project No.';
             Description = 'AOB-11';
         }
+
+        field(50009;"DXC Ship-to Address 3";Text[50])
+        {
+            Caption = 'Ship-to Address 3';
+            Description = 'AOB-11';
+        }
     }
 
     [Scope('Personalization')]
