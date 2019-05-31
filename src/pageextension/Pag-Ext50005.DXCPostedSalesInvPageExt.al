@@ -55,6 +55,15 @@ pageextension 50005 "DXCPostedSalesInvPageExt" extends "Posted Sales Invoice" //
                 }
         }   
 
+        addafter("Ship-to Address 2")
+        {
+            field("Address 3";"DXC Address 3")
+            {
+                ApplicationArea = All;
+                Editable = false;
+            }
+        } 
+
     }
 
     var 
