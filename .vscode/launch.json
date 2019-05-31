@@ -6,22 +6,22 @@
             "request": "launch",            
             "name": "Your own server",
             // ---- Docker---
-            // "server": "http://172.17.82.244", 
-            // "serverInstance": "NAV",                   
-            // "port"  : 7049,   
+            "server": "http://172.17.82.244", 
+            "serverInstance": "NAV",                   
+            "port"  : 7049,   
             // --- DEV ---         
-            "server": "http://172.19.2.41",                    
-            "serverInstance": "TPM-DEV",
-            "port"  : 7059,   
+            // "server": "http://172.19.2.41",                    
+            // "serverInstance": "TPM-DEV",
+            // "port"  : 7059,   
             // --- TEST ---
             // "server": "http://172.19.2.41", 
             //  "serverInstance": "DynamicsNAV110",         
             //  "port"  : 7049,
-            "authentication": "Windows",
-            // "authentication":"UserPassword",
+            // "authentication": "Windows",
+            "authentication":"UserPassword",
             //"tenant": "default",
-            "startupObjectId": 22,
-           "schemaUpdateMode": "Synchronize"
+            //"startupObjectId": 22,
+           //"schemaUpdateMode": "Synchronize"
         //    "schemaUpdateMode": "Recreate"
             //"startupObjectType": "Page",
             //"breakOnError": true
