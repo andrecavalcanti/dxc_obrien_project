@@ -17,6 +17,15 @@ pageextension 50031 "DXCCustomerCardExt" extends "Customer Card" //MyTargetPageI
                 ApplicationArea = All;
             }
         }
+
+        // >> AOB-75  
+        addafter(Name)
+        {
+            field("Search Name";"Search Name")
+            {
+            }
+        }
+        // << AOB-75
     }
     
     actions

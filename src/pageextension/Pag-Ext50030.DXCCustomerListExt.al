@@ -13,6 +13,11 @@ pageextension 50030 "DXCCustomerListExt" extends "Customer List" //MyTargetPageI
             {
                 ApplicationArea = All;
             }
+            // >> AOB-75
+            field(City;City)
+            {
+            }
+            // << AOB-75
         }
 
     }
